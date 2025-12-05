@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K Reddy Mohammed Sadiq | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <span>KRMS</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="hero" class="hero container">
+    <div class="hero-text">
+      <p class="hero-tagline">Mechanical · Robotics · Drones · Vehicle Dynamics</p>
+      <h1>Hi, I'm <span class="accent">K Reddy Mohammed Sadiq</span></h1>
+      <p class="hero-sub">
+        18-year-old B.Tech Mechanical Engineering student at
+        <strong>IIT Indore</strong>, building robots, drones, assistive systems,
+        and high-performance vehicles that bridge theory and real hardware.
+      </p>
+
+      <div class="hero-meta">
+        <p><strong>CGPA:</strong> 7.48 (current) · Roll No.: 240003036</p>
+        <p><strong>Clubs:</strong> Aeromodelling, Robotics, IVDC, S&T Council, CAE Club</p>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary">View My Projects</a>
+        <a href="#resume" class="btn secondary">View Resume</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <!-- OPTIONAL: Your photo -->
+      <!-- <img class="hero-photo" src="assets/profile.jpg" alt="K Reddy Mohammed Sadiq" /> -->
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="section container">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-text">
+      I'm a second-year <strong>B.Tech Mechanical Engineering</strong> student at
+      <strong>Indian Institute of Technology Indore</strong>. I love taking ideas
+      from textbooks, simulations, and research and turning them into working
+      prototypes – from gesture-controlled drones and EMG bionic arms to
+      stair-climbing wheelchairs, autonomous buggies, and intelligent
+      wastewater systems.
+    </p>
+    <p class="section-text" style="margin-top:0.75rem;">
+      My interests sit at the intersection of <strong>robotics, drones, embedded systems,
+      vehicle dynamics, and aerodynamics</strong>, using tools like Fusion 360,
+      SolidWorks, Ansys, MATLAB, ROS2, and microcontrollers such as Arduino,
+      ESP32, STM32, and Raspberry Pi.
+    </p>
+  </section>
+
+  <!-- ================= EDUCATION SECTION ================= -->
+  <section id="education" class="section container">
+    <h2 class="section-title">Education</h2>
+    <div class="edu-table-wrapper">
+      <table class="edu-table">
+        <thead>
+          <tr>
+            <th>Degree / Certificate</th>
+            <th>Institute / Board</th>
+            <th>CGPA / Percentage</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>B.Tech (Mechanical Engineering)</td>
+            <td>IIT Indore</td>
+            <td>7.48 (Current)</td>
+            <td>2024 – Present</td>
+          </tr>
+          <tr>
+            <td>Senior Secondary</td>
+            <td>TSBIE Board</td>
+            <td>98%</td>
+            <td>2024</td>
+          </tr>
+          <tr>
+            <td>Secondary</td>
+            <td>ICSE Board</td>
+            <td>91%</td>
+            <td>2022</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS SECTION ================= -->
+  <section id="skills" class="section container">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Simulation & Design</h3>
+        <p>Fusion 360, SolidWorks, Ansys (structural, fluent, optimization, LS-DYNA), Simulink.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Hardware & Microcontrollers</h3>
+        <p>Arduino, ESP32/ESP8266, STM32, Raspberry Pi; rich experience integrating sensors & actuators.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Manufacturing & Lab</h3>
+        <p>Circuit design, lathe, milling, welding, cutting, soldering, sheet bending, 3D printing, laser cutting.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Programming & Tools</h3>
+        <p>Basic C++, MATLAB, LaTeX; OpenCV for gesture recognition and computer-vision based control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SECTION ================= -->
+  <section id="projects" class="section container">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-text">
+      These are my key projects – resume projects first, followed by additional robotics
+      and aero projects. Each card includes overview, design, and space for code & media.
+    </p>
+
+    <!-- ========= PROJECT 1: GESTURE CONTROL DRONE ========= -->
+    <article class="project fade-in" id="project-gesture-drone">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>Gesture Control Drone</h3>
+          <p class="project-tag">Aeromodelling Club · Computer Vision · Drone Control</p>
+
+          <h4>Overview</h4>
+          <p>
+            Developed a quadcopter that can be controlled using hand gestures.
+            A camera and OpenCV pipeline detect gestures and map them to flight
+            commands such as take-off, hover, rotate, and directional motion.
+          </p>
+
+          <h4>Design & Hardware</h4>
+          <ul>
+            <li>Quadcopter frame with brushless motors and ESCs.</li>
+            <li>Flight controller (Betaflight/custom) for stabilization.</li>
+            <li>Laptop running real-time OpenCV gesture recognition.</li>
+            <li>Wireless communication link between ground station and drone.</li>
+          </ul>
+
+          <h4>Code & Control Logic</h4>
+          <p>
+            The system has two layers: a Python/OpenCV node that classifies gestures,
+            and a firmware layer that converts high-level commands into stable motor
+            outputs, respecting attitude and safety constraints.
+          </p>
+          <p>
+            <strong>Code:</strong>
+            <!-- TODO: put your real link -->
+            <a href="#" target="_blank">Gesture Drone Repository</a>
+          </p>
+
+          <h4>Media</h4>
+          <div class="media-grid">
+            <!-- TODO: replace with real images -->
+            <img src="assets/gesture-drone-1.jpg" alt="Gesture drone prototype" />
+            <img src="assets/gesture-drone-2.jpg" alt="Gesture drone flight test" />
+          </div>
+
+          <!-- TODO: replace VIDEO_ID_HERE or remove iframe if no video yet -->
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+              title="Gesture Controlled Drone Demo"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- More realistic animated drone scene -->
+        <div class="project-visual drone-visual">
+          <div class="drone-shadow"></div>
+          <div class="drone">
+            <div class="drone-body"></div>
+            <div class="drone-arm arm1"></div>
+            <div class="drone-arm arm2"></div>
+            <div class="drone-arm arm3"></div>
+            <div class="drone-arm arm4"></div>
+            <div class="drone-prop prop1"></div>
+            <div class="drone-prop prop2"></div>
+            <div class="drone-prop prop3"></div>
+            <div class="drone-prop prop4"></div>
+          </div>
+          <p class="visual-caption">Drone flies in and hovers as you scroll ✋🚁</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========= PROJECT 2: EMG BASED BIONIC ARM ========= -->
+    <article class="project fade-in" id="project-emg-arm">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>EMG Based Bionic Arm</h3>
+          <p class="project-tag">Biomedical Robotics · EMG · Mechatronics</p>
+
+          <h4>Overview</h4>
+          <p>
+            Ongoing development of a bionic arm driven by EMG signals.
+            The arm interprets muscle activity from the forearm to control
+            finger, wrist, and elbow motion for assistive or prosthetic use.
+          </p>
+
+          <h4>Design & Hardware</h4>
+          <ul>
+            <li>Multi-joint arm CAD modelled in Fusion 360 / SolidWorks.</li>
+            <li>Servo-based actuation for fingers and joints.</li>
+            <li>EMG sensors for muscle activation measurement.</li>
+            <li>Microcontroller for real-time filtering and control.</li>
+          </ul>
+
+          <h4>Signal & Control</h4>
+          <p>
+            EMG signals are filtered, rectified, and thresholded to detect
+            intent, which maps to discrete gestures such as open hand,
+            close hand, and wrist rotation. Future versions target
+            proportional and adaptive control.
+          </p>
+
+          <h4>Media</h4>
+          <div class="media-grid">
+            <img src="assets/emg-arm-1.jpg" alt="EMG bionic arm CAD" />
+            <img src="assets/emg-arm-2.jpg" alt="Bionic arm prototype" />
+          </div>
+        </div>
+
+        <!-- Realistic signal + arm motion visual -->
+        <div class="project-visual emg-visual">
+          <div class="signal-track">
+            <div class="signal-wave"></div>
+          </div>
+          <div class="joint-arc"></div>
+          <div class="joint-dot"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========= PROJECT 3: HIGH PERFORMANCE SUSPENSION ========= -->
+    <article class="project fade-in" id="project-suspension">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>High Performance Suspension System for Track Use</h3>
+          <p class="project-tag">Vehicle Dynamics · CAE · Suspension Geometry</p>
+
+          <h4>Overview</h4>
+          <p>
+            Designed a complete suspension geometry for track-oriented vehicles,
+            targeting precise handling, grip, and body control under cornering
+            and braking loads.
+          </p>
+
+          <h4>Design & Analysis</h4>
+          <ul>
+            <li>Configured suspension layout and hard points.</li>
+            <li>Analyzed camber gain, roll center migration, toe curves.</li>
+            <li>Evaluated load cases and structural stiffness in CAE tools.</li>
+          </ul>
+
+          <h4>Results</h4>
+          <p>
+            Produced travel vs. camber/toe plots and assessed compromises
+            between comfort and ultimate track performance.
+          </p>
+          <p>
+            <strong>Report / Files:</strong>
+            <a href="#" target="_blank">Suspension Design Report</a>
+          </p>
+        </div>
+
+        <!-- Animated response graph visual -->
+        <div class="project-visual suspension-visual">
+          <div class="graph-frame">
+            <div class="graph-line"></div>
+            <div class="graph-point"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========= PROJECT 4: GRIP CRAWLER ========= -->
+    <article class="project fade-in" id="project-grip-crawler">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>Grip Crawler – Stair Climbing Wheelchair Concept</h3>
+          <p class="project-tag">Assistive Device · Concept Design</p>
+
+          <h4>Overview</h4>
+          <p>
+            Concept for a stair-climbing wheelchair using a claw-based wheel
+            mechanism to maintain grip and stability while ascending/descending
+            stairs, aiming to improve accessibility.
+          </p>
+
+          <h4>Key Features</h4>
+          <ul>
+            <li>Claw-equipped wheels for enhanced stair-edge traction.</li>
+            <li>Mechanism to maintain user seat orientation.</li>
+            <li>Basic strength checks on load-bearing members.</li>
+          </ul>
+
+          <h4>Media</h4>
+          <div class="media-grid">
+            <img src="assets/grip-crawler-1.jpg" alt="Grip crawler CAD" />
+            <img src="assets/grip-crawler-2.jpg" alt="Stair climbing mechanism" />
+          </div>
+        </div>
+
+        <!-- More realistic stair climbing motion -->
+        <div class="project-visual crawler-visual">
+          <div class="stair-plane"></div>
+          <div class="crawler-unit">
+            <div class="crawler-wheel cw1"></div>
+            <div class="crawler-wheel cw2"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========= PROJECT 5: WASTEWATER & MICRO-HYDRO ========= -->
+    <article class="project fade-in" id="project-wastewater">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>Intelligent Wastewater Recycling & Micro-Hydro Power</h3>
+          <p class="project-tag">IoT · Sustainability · Fluid Systems</p>
+
+          <h4>Overview</h4>
+          <p>
+            Built a first prototype of a system that senses wastewater quality,
+            classifies it, and routes it appropriately for reuse while exploring
+            micro-hydro energy recovery possibilities.
+          </p>
+
+          <h4>System Design</h4>
+          <ul>
+            <li>Multi-sensor array to detect water characteristics.</li>
+            <li>Microcontroller logic for threshold-based routing.</li>
+            <li>Actuated valves directing water into separate tanks.</li>
+            <li>Conceptual micro-hydro turbine integration.</li>
+          </ul>
+
+          <h4>Media</h4>
+          <div class="media-grid">
+            <img src="assets/wastewater-1.jpg" alt="Wastewater prototype" />
+            <img src="assets/wastewater-2.jpg" alt="Piping and sensor layout" />
+          </div>
+        </div>
+
+        <!-- Flowing water & tanks -->
+        <div class="project-visual water-visual">
+          <div class="tank t1"></div>
+          <div class="tank t2"></div>
+          <div class="flow-pipe">
+            <div class="flow-stream"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========= PROJECT 6: AUTONOMOUS BUGGY ========= -->
+    <article class="project fade-in" id="project-buggy">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>Autonomous Buggy</h3>
+          <p class="project-tag">ROS2 · Gazebo · Autonomous Systems</p>
+
+          <h4>Overview</h4>
+          <p>
+            Designing control and navigation for an autonomous buggy.
+            Simulation work in Gazebo and ROS2 is in progress, with the goal
+            of porting algorithms to a physical platform.
+          </p>
+
+          <h4>Work Done</h4>
+          <ul>
+            <li>Created buggy model and world in Gazebo.</li>
+            <li>Implemented motion control and waypoint navigation.</li>
+            <li>Explored LiDAR/camera configuration for perception.</li>
+          </ul>
+
+          <p>
+            <strong>Code / Simulation:</strong>
+            <a href="#" target="_blank">ROS2 Buggy Package</a>
+          </p>
+        </div>
+
+        <!-- Moving buggy over track -->
+        <div class="project-visual buggy-visual">
+          <div class="road"></div>
+          <div class="buggy-shell">
+            <div class="buggy-wheel bw1"></div>
+            <div class="buggy-wheel bw2"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========= PROJECT 7: GO-KART ========= -->
+    <article class="project fade-in" id="project-go-kart">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>Go-Kart for IKR Competition</h3>
+          <p class="project-tag">Fabrication · Chassis · Team Project</p>
+
+          <h4>Overview</h4>
+          <p>
+            Contributing to the fabrication and integration of a go-kart for IKR,
+            focusing on chassis, suspension mounting, and workshop activities.
+          </p>
+
+          <h4>Contributions</h4>
+          <ul>
+            <li>Supported frame design and stiffness considerations.</li>
+            <li>Assisted with drivetrain and packaging decisions.</li>
+            <li>Hands-on work during fabrication and assembly.</li>
+          </ul>
+        </div>
+
+        <!-- Dynamic kart motion -->
+        <div class="project-visual kart-visual">
+          <div class="kart-path"></div>
+          <div class="kart-shell">
+            <div class="kart-wheel kw1"></div>
+            <div class="kart-wheel kw2"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========= PROJECT 8: EV SUSPENSION ========= -->
+    <article class="project fade-in" id="project-ev-suspension">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>Electric Vehicle Suspension Geometry</h3>
+          <p class="project-tag">EV · Suspension · Ongoing</p>
+
+          <h4>Overview</h4>
+          <p>
+            Working on suspension geometry for an electric vehicle, tuned around EV
+            weight distribution, center of gravity, and packaging constraints of battery packs.
+          </p>
+
+          <h4>Focus Areas</h4>
+          <ul>
+            <li>Front/rear geometry for comfort and control.</li>
+            <li>Integration with braking and steering systems.</li>
+            <li>Consideration of unsprung mass and ride quality.</li>
+          </ul>
+        </div>
+
+        <!-- Battery & EV silhouette -->
+        <div class="project-visual ev-visual">
+          <div class="battery-pack"></div>
+          <div class="ev-shell"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========= PROJECT 9: MORPHROBOT ========= -->
+    <article class="project fade-in" id="project-morphrobot">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>Morphrobot – Transformable Robot Concept</h3>
+          <p class="project-tag">Morphing Mechanisms · Conceptual Design</p>
+
+          <h4>Overview</h4>
+          <p>
+            Conceptual project exploring a transformable 'Morphrobot' that can
+            switch between different configurations (e.g. compact vs. extended)
+            depending on the task.
+          </p>
+
+          <h4>Concept</h4>
+          <ul>
+            <li>Shape-shifting structure for different locomotion modes.</li>
+            <li>Mechanisms for altering stance and degrees of freedom.</li>
+          </ul>
+        </div>
+
+        <!-- Two morphing states crossfading -->
+        <div class="project-visual morph-visual">
+          <div class="morph-block m1"></div>
+          <div class="morph-block m2"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========= EXTRA PROJECT 10: LINE FOLLOWING ROBOT ========= -->
+    <article class="project fade-in" id="project-line-follower">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>Line Following & Obstacle Detection Robot</h3>
+          <p class="project-tag">Arduino · IR Sensors · Ultrasonic</p>
+
+          <h4>Overview</h4>
+          <p>
+            A differential-drive robot that follows a black line using IR sensors
+            and uses an ultrasonic sensor to detect obstacles and execute bypass
+            maneuvers before rejoining the line.
+          </p>
+
+          <p>
+            <strong>Code:</strong>
+            <a href="#" target="_blank">Line Follower Code</a>
+          </p>
+        </div>
+
+        <!-- Clean tech line animation -->
+        <div class="project-visual line-visual">
+          <div class="line-track"></div>
+          <div class="line-bot"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========= EXTRA PROJECT 11: ESP32 ROBOT ========= -->
+    <article class="project fade-in" id="project-esp32-robot">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>ESP32-Based Smart Obstacle Handling Robot</h3>
+          <p class="project-tag">ESP32 · State Machine · Robotics</p>
+
+          <h4>Overview</h4>
+          <p>
+            An ESP32-based robot that executes 90° turns and obstacle-avoidance
+            sequences using sonar sensing and a non-blocking, state-machine-based
+            control structure.
+          </p>
+
+          <p>
+            <strong>Code:</strong>
+            <a href="#" target="_blank">ESP32 Robot Code</a>
+          </p>
+        </div>
+
+        <!-- Radar sweep -->
+        <div class="project-visual radar-visual">
+          <div class="radar-ring">
+            <div class="radar-sweep"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========= EXTRA PROJECT 12: AERO / SPIN LAUNCH ========= -->
+    <article class="project fade-in" id="project-aero-spin">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>Spin Launch / Wind Tunnel & Aerodynamics Project</h3>
+          <p class="project-tag">Aerodynamics · Experimental Concepts</p>
+
+          <h4>Overview</h4>
+          <p>
+            Concept and calculations for an aerodynamic test setup to study lift,
+            drag, and stability of models under high-speed flow and spin-launch
+            conditions.
+          </p>
+
+          <p>
+            <strong>Report / Calculations:</strong>
+            <a href="#" target="_blank">Aero Notes</a>
+          </p>
+        </div>
+
+        <!-- Airflow streamlines -->
+        <div class="project-visual airflow-visual">
+          <div class="airflow-line a1"></div>
+          <div class="airflow-line a2"></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= RESUME SECTION ================= -->
+  <section id="resume" class="section container">
+    <h2 class="section-title">Resume</h2>
+    <p class="section-text">
+      You can quickly view or download my latest resume here.
+    </p>
+
+    <div class="resume-actions">
+      <!-- TODO: put your actual resume pdf at assets/krms_resume.pdf and update the name if needed -->
+      <a href="file:///C:/Users/krmsa/Downloads/resume_new%20(4)%20(1).pdf" class="btn primary" target="_blank">Download Resume (PDF)</a>
+      <a href="file:///C:/Users/krmsa/Downloads/resume_new%20(4)%20(1).pdf" class="btn secondary" target="_blank">Open in New Tab</a>
+    </div>
+
+    <div class="resume-embed">
+      <!-- This will show the resume inline if browser supports PDF -->
+      <iframe src="file:///C:/Users/krmsa/Downloads/resume_new%20(4)%20(1).pdf    " title="Resume PDF"></iframe>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE / POSITIONS / ACHIEVEMENTS ================= -->
+  <section id="experience" class="section container">
+    <h2 class="section-title">Experience & Responsibilities</h2>
+
+    <div class="experience-grid">
+      <div>
+        <h3>Competitions</h3>
+        <ul class="plain-list">
+          <li>NXP-AIM competition.</li>
+          <li>Aakruti 2025.</li>
+          <li>Vishwakarma 2026 (in progress).</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Positions of Responsibility</h3>
+        <ul class="plain-list">
+          <li>Inventory Head, Aeromodelling Club, IIT Indore (Sep 2025 – Present).</li>
+          <li>Core Member, IVDC Club, IIT Indore (Sep 2025 – Present).</li>
+          <li>Core Member, Robotics Club, IIT Indore (Sep 2025 – Present).</li>
+          <li>Core Member, Science & Technology Council, IIT Indore (Sep 2025 – Present).</li>
+          <li>UG Teaching Assistant, Makerspace Laboratory, IIT Indore (Jul 2025 – Present).</li>
+          <li>Core Member, CAE Club, IIT Indore (Oct 2024 – Sep 2025).</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Courses & Achievements</h3>
+        <p><strong>Courses:</strong></p>
+        <ul class="plain-list">
+          <li>Flight Mechanics Basics (Coursera).</li>
+          <li>OpenCV (OpenCV University).</li>
+          <li>Autonomous Systems (Robolearn).</li>
+          <li>Medical Robotics (Udemy).</li>
+        </ul>
+        <p style="margin-top:0.5rem;"><strong>Achievements:</strong></p>
+        <ul class="plain-list">
+          <li>Gold Medal – IITISoC 2025 under DEiMoS 2025.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contact" class="section container">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-text">
+      For collaborations, technical discussions, or opportunities, feel free to reach out.
+    </p>
+
+    <div class="contact-info">
+      <p><strong>Phone:</strong> <a href="tel:+918074816579">+91-8074816579</a></p>
+      <p><strong>Institute Email:</strong> <a href="mailto:me240003036@iiti.ac.in">me240003036@iiti.ac.in</a></p>
+      <p><strong>Personal Email:</strong> <a href="mailto:krmsadiq3@gmail.com">krmsadiq3@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/k-reddy-mohammed-sadiq" target="_blank">k-reddy-mohammed-sadiq</a></p>
+      <p><strong>GitHub:</strong> <a href="#" target="_blank">Add your GitHub profile link here</a></p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p>© <span id="year"></span> K Reddy Mohammed Sadiq. Built with ❤️ and a lot of robots.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
