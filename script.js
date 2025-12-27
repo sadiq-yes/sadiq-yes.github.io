@@ -44,3 +44,24 @@ function startDroneAnimation() {
   - For the gesture drone, the IntersectionObserver also starts a dedicated
     droneFly + spin sequence via startDroneAnimation().
 */
+const humanoid = document.getElementById("humanoid");
+
+let mouseX = 0, mouseY = 0;
+let currentX = 0, currentY = 0;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = (e.clientX / window.innerWidth - 0.5) * 30;
+  mouseY = (e.clientY / window.innerHeight - 0.5) * 30;
+});
+
+function animateHumanoid() {
+  currentX += (mouseX - currentX) * 0.05;
+  currentY += (mouseY - currentY) * 0.05;
+
+  humanoid.style.transform =
+    `translate(${currentX}px, ${currentY}px)`;
+
+  requestAnimationFrame(animateHumanoid);
+}
+
+animateHumanoid();
