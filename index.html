@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
   <!-- ================= NAVBAR ================= -->
   <header class="header">
     <nav class="nav container">
@@ -38,7 +40,7 @@
       </p>
 
       <div class="hero-meta">
-        <p><strong>CGPA:</strong> 7.48 (current) · Roll No.: 240003036</p>
+        <p><strong>CGPA:</strong> 7.65 (current) · Roll No.: 240003036</p>
         <p><strong>Clubs:</strong> Aeromodelling, Robotics, IVDC, S&T Council, CAE Club</p>
       </div>
 
@@ -93,7 +95,7 @@
           <tr>
             <td>B.Tech (Mechanical Engineering)</td>
             <td>IIT Indore</td>
-            <td>7.48 (Current)</td>
+            <td>7.65 (Current)</td>
             <td>2024 – Present</td>
           </tr>
           <tr>
@@ -113,28 +115,47 @@
     </div>
   </section>
 
-  <!-- ================= SKILLS SECTION ================= -->
   <section id="skills" class="section container">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h3>Simulation & Design</h3>
-        <p>Fusion 360, SolidWorks, Ansys (structural, fluent, optimization, LS-DYNA), Simulink.</p>
-      </div>
-      <div class="skill-card">
-        <h3>Hardware & Microcontrollers</h3>
-        <p>Arduino, ESP32/ESP8266, STM32, Raspberry Pi; rich experience integrating sensors & actuators.</p>
-      </div>
-      <div class="skill-card">
-        <h3>Manufacturing & Lab</h3>
-        <p>Circuit design, lathe, milling, welding, cutting, soldering, sheet bending, 3D printing, laser cutting.</p>
-      </div>
-      <div class="skill-card">
-        <h3>Programming & Tools</h3>
-        <p>Basic C++, MATLAB, LaTeX; OpenCV for gesture recognition and computer-vision based control.</p>
-      </div>
+  <h2 class="section-title">Technical Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Design & CAD</h3>
+      <p>Fusion 360, SolidWorks, OpenVSP</p>
     </div>
-  </section>
+
+    <div class="skill-card">
+      <h3>Simulation & Analysis</h3>
+      <p>
+        ANSYS (Static Structural, Fluent, CFX, Structural Optimization, OptiSLang, LS-DYNA),
+        Simulink
+      </p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Hardware & Embedded Systems</h3>
+      <p>
+        Arduino, ESP32/ESP8266, STM32, Raspberry Pi
+      </p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Manufacturing & Fabrication</h3>
+      <p>
+        Circuit design, lathe, milling, welding, cutting, soldering,
+        sheet bending, 3D printing, laser cutting
+      </p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Programming & Technical Tools</h3>
+      <p>
+        Python, C++, MATLAB, LaTeX
+      </p>
+    </div>
+  </div>
+</section>
+
 
   <!-- ================= PROJECTS SECTION ================= -->
   <section id="projects" class="section container">
@@ -143,7 +164,72 @@
       These are my key projects – resume projects first, followed by additional robotics
       and aero projects. Each card includes overview, design, and space for code & media.
     </p>
+    <!-- ========= PROJECT 0: INTER-IIT POWERED LIFT WING ========= -->
+    <article class="project fade-in" id="project-interiit-wing">
+      <div class="project-main">
+        <div class="project-text">
+          <h3>Powered-Lift Wing Design for STOL Aircraft</h3>
+          <p class="project-tag">Inter-IIT Tech Meet 14.0 · Aerodynamics · CFD</p>
 
+          <h4>Overview</h4>
+          <p>
+            Designed and analysed a powered-lift wing configuration for
+            Short Take-Off and Landing (STOL) aircraft as part of
+            <strong>Inter-IIT Tech Meet 14.0</strong>.
+            The objective was to achieve high lift coefficients at low take-off
+            speeds by tightly coupling propulsion and wing aerodynamics.
+          </p>
+
+          <h4>Aerodynamic Design & Analysis</h4>
+          <ul>
+            <li>Studied baseline and multi-element airfoil configurations under low Reynolds number regimes.</li>
+            <li>Implemented propeller-wing interaction using pressure-jump / actuator-disk modelling.</li>
+            <li>Performed steady and comparative CFD simulations in ANSYS Fluent.</li>
+            <li>Evaluated lift, drag, pitching moment, and aerodynamic center shift.</li>
+          </ul>
+
+          <h4>Performance Evaluation</h4>
+          <p>
+            Aircraft-level performance metrics such as take-off ground roll,
+            thrust-to-weight sensitivity, and lift augmentation due to slipstream
+            effects were analysed using MATLAB-based models validated against CFD trends.
+          </p>
+
+          <p>
+            <strong>Tools:</strong>
+            ANSYS Fluent · MATLAB · XFOIL · OpenVSP · Aerodynamic Theory
+          </p>
+        </div>
+
+        <div class="project-visual airflow-visual powered-wing-visual">
+
+  <!-- Actuator disk (propeller model) -->
+  <div class="prop-disk"></div>
+
+  <!-- Wing -->
+  <div class="wing">
+    <div class="wing-flap"></div>
+  </div>
+
+  <!-- Slipstream -->
+  <div class="slipstream s1"></div>
+  <div class="slipstream s2"></div>
+  <div class="slipstream s3"></div>
+
+  <!-- Freestream airflow -->
+  <div class="airflow-line a1"></div>
+  <div class="airflow-line a2"></div>
+  <div class="airflow-line a3"></div>
+
+  <p class="visual-caption">
+    Actuator-disk slipstream accelerating flow over deflected STOL wing
+  </p>
+
+</div>
+
+    </article>
+
+    
     <!-- ========= PROJECT 1: GESTURE CONTROL DRONE ========= -->
     <article class="project fade-in" id="project-gesture-drone">
       <div class="project-main">
@@ -198,23 +284,37 @@
           </div>
         </div>
 
-        <!-- More realistic animated drone scene -->
-        <div class="project-visual drone-visual">
-          <div class="drone-shadow"></div>
-          <div class="drone">
-            <div class="drone-body"></div>
-            <div class="drone-arm arm1"></div>
-            <div class="drone-arm arm2"></div>
-            <div class="drone-arm arm3"></div>
-            <div class="drone-arm arm4"></div>
-            <div class="drone-prop prop1"></div>
-            <div class="drone-prop prop2"></div>
-            <div class="drone-prop prop3"></div>
-            <div class="drone-prop prop4"></div>
-          </div>
-          <p class="visual-caption"></p>
-        </div>
-      </div>
+        <div class="project-visual gesture-drone-visual">
+
+  <!-- Hand / Vision input -->
+  <div class="hand-vision">
+    <div class="hand-palm"></div>
+    <div class="hand-wave"></div>
+    <p class="vision-label">OpenCV Hand Tracking</p>
+  </div>
+
+  <!-- Wireless command link -->
+  <div class="command-link"></div>
+
+  <!-- Drone -->
+  <div class="drone-system">
+    <div class="drone-shadow"></div>
+
+    <div class="drone-body"></div>
+
+    <div class="drone-arm a1"></div>
+    <div class="drone-arm a2"></div>
+    <div class="drone-arm a3"></div>
+    <div class="drone-arm a4"></div>
+
+    <div class="drone-prop p1"></div>
+    <div class="drone-prop p2"></div>
+    <div class="drone-prop p3"></div>
+    <div class="drone-prop p4"></div>
+  </div>
+
+</div>
+
     </article>
 
     <!-- ========= PROJECT 2: EMG BASED BIONIC ARM ========= -->
@@ -254,15 +354,45 @@
           </div>
         </div>
 
-        <!-- Realistic signal + arm motion visual -->
-        <div class="project-visual emg-visual">
-          <div class="signal-track">
-            <div class="signal-wave"></div>
-          </div>
-          <div class="joint-arc"></div>
-          <div class="joint-dot"></div>
-        </div>
-      </div>
+       <div class="project-visual emg-arm-visual">
+
+  <!-- EMG signal source -->
+  <div class="emg-sensor">
+    <div class="emg-electrode e1"></div>
+    <div class="emg-electrode e2"></div>
+    <div class="emg-wave"></div>
+    <p class="emg-label">EMG Signal</p>
+  </div>
+
+  <!-- Signal processing path -->
+  <div class="signal-path"></div>
+
+  <!-- Futuristic Robotic Bionic Arm -->
+<div class="robotic-arm-future">
+
+  <div class="actuator base-actuator"></div>
+
+  <div class="link future-link upper"></div>
+
+  <div class="joint future-joint j1"></div>
+
+  <div class="link future-link forearm"></div>
+
+  <div class="joint future-joint j2"></div>
+
+  <div class="end-effector">
+    <div class="finger-blade f1"></div>
+    <div class="finger-blade f2"></div>
+  </div>
+
+</div>
+
+
+  <p class="visual-caption">
+    EMG acquisition → signal processing → servo-driven joint actuation
+  </p>
+</div>
+
     </article>
 
     <!-- ========= PROJECT 3: HIGH PERFORMANCE SUSPENSION ========= -->
@@ -293,18 +423,21 @@
           </p>
           <p>
             <strong>Report / Files:</strong>
-            <a href="#" target="_blank">Suspension Design Report</a>
+            <a href="https://github.com/sadiq-yes/suspension-system-for-track-use" target="_blank">Suspension Design Report</a>
           </p>
         </div>
 
-        <!-- Animated response graph visual -->
-        <div class="project-visual suspension-visual">
-          <div class="graph-frame">
-            <div class="graph-line"></div>
-            <div class="graph-point"></div>
-          </div>
-        </div>
-      </div>
+       <!-- LOTTIE ANIMATION -->
+<div class="lottie-wrapper">
+  <lottie-player
+    src="car.lottie"
+    background="transparent"
+    speed="1"
+    loop
+    autoplay>
+  </lottie-player>
+</div>
+
     </article>
 
     <!-- ========= PROJECT 4: GRIP CRAWLER ========= -->
@@ -619,48 +752,66 @@
     </div>
   </section>
 
-  <!-- ================= EXPERIENCE / POSITIONS / ACHIEVEMENTS ================= -->
   <section id="experience" class="section container">
-    <h2 class="section-title">Experience & Responsibilities</h2>
+  <h2 class="section-title">Experience, Courses & Achievements</h2>
 
-    <div class="experience-grid">
-      <div>
-        <h3>Competitions</h3>
-        <ul class="plain-list">
-          <li>NXP-AIM competition.</li>
-          <li>Aakruti 2025.</li>
-          <li>Vishwakarma 2026 (in progress).</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Positions of Responsibility</h3>
-        <ul class="plain-list">
-          <li>Inventory Head, Aeromodelling Club, IIT Indore (Sep 2025 – Present).</li>
-          <li>Core Member, IVDC Club, IIT Indore (Sep 2025 – Present).</li>
-          <li>Core Member, Robotics Club, IIT Indore (Sep 2025 – Present).</li>
-          <li>Core Member, Science & Technology Council, IIT Indore (Sep 2025 – Present).</li>
-          <li>UG Teaching Assistant, Makerspace Laboratory, IIT Indore (Jul 2025 – Present).</li>
-          <li>Core Member, CAE Club, IIT Indore (Oct 2024 – Sep 2025).</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Courses & Achievements</h3>
-        <p><strong>Courses:</strong></p>
-        <ul class="plain-list">
-          <li>Flight Mechanics Basics (Coursera).</li>
-          <li>OpenCV (OpenCV University).</li>
-          <li>Autonomous Systems (Robolearn).</li>
-          <li>Medical Robotics (Udemy).</li>
-        </ul>
-        <p style="margin-top:0.5rem;"><strong>Achievements:</strong></p>
-        <ul class="plain-list">
-          <li>Gold Medal – IITISoC 2025 under DEiMoS 2025.</li>
-        </ul>
-      </div>
+  <div class="experience-grid">
+    <!-- COMPETITIONS -->
+    <div>
+      <h3>Competitions</h3>
+      <ul class="plain-list">
+        <li>Inter-IIT Tech Meet 14.0 – LAT Aerospace (Powered Lift Wing)</li>
+        <li>NXP-AIM 2025 – Regional Finalist</li>
+        <li>Aakruti 2025</li>
+        <li>Vishwakarma 2026 (Ongoing)</li>
+      </ul>
     </div>
-  </section>
+
+    <!-- POSITIONS -->
+    <div>
+      <h3>Positions of Responsibility</h3>
+      <ul class="plain-list">
+        <li>Inventory Head, Aeromodelling Club, IIT Indore (Sep 2024 – Present)</li>
+        <li>Core Member, IVDC Club, IIT Indore (Sep 2024 – Present)</li>
+        <li>Core Member, Robotics Club, IIT Indore (Sep 2024 – Present)</li>
+        <li>Core Member, Science & Technology Council, IIT Indore (Sep 2024 – Present)</li>
+        <li>UG Teaching Assistant, Makerspace Laboratory, IIT Indore (Jul 2025 – Present)</li>
+        <li>Core Member, CAE Club, IIT Indore (Oct 2024 – Sep 2025)</li>
+      </ul>
+    </div>
+
+    <!-- COURSES & ACHIEVEMENTS -->
+    <div>
+      <h3>Key Courses & Achievements</h3>
+
+      <p><strong>Core Academic Courses:</strong></p>
+      <ul class="plain-list">
+        <li>Solid Mechanics</li>
+        <li>Fluid Mechanics</li>
+        <li>Thermodynamics</li>
+        <li>Fundamentals of Vibration</li>
+        <li>Materials Science and Engineering</li>
+        <li>Principles of Industrialization</li>
+        <li>Optical Measurement Techniques in Fluid Mechanics</li>
+      </ul>
+
+      <p style="margin-top:0.6rem;"><strong>Certifications & Online Courses:</strong></p>
+      <ul class="plain-list">
+        <li>Flight Mechanics Basics – Coursera</li>
+        <li>OpenCV – OpenCV University</li>
+        <li>Autonomous Systems – Robolearn</li>
+        <li>Medical Robotics – Udemy</li>
+      </ul>
+
+      <p style="margin-top:0.6rem;"><strong>Achievements:</strong></p>
+      <ul class="plain-list">
+        <li>6th Position – Inter-IIT Tech Meet 14.0 (LAT Aerospace)</li>
+        <li>Gold Medal – IITISoC 2025 under DEiMoS</li>
+        <li>Regional Finalist – NXP-AIM 2025</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
   <!-- ================= CONTACT SECTION ================= -->
   <section id="contact" class="section container">
@@ -685,4 +836,4 @@
 
   <script src="script.js"></script>
 </body>
-</html>
+</html>  use this only just add the another project of inter iit and add in more detail and also add the correspding animations and all and give the final codes
