@@ -1957,3 +1957,9 @@ body > *:not(.humanoid-bg) {
   height: 100%;
   object-fit: cover;
 }
+@media (max-width: 768px) {
+  .resume-embed {
+    display: none;
+  }
+}
+
